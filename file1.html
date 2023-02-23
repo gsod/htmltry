@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<style>
+			body {
+				background-image: url("museumsala.jpg");
+				background-size: contain;
+			}
+			.centra-h1 {
+				text-align: center;
+			}
+			.prova-p {
+				font-size: x-large;
+				font-family: "Georgia";
+				text-align: left;
+				color: black;
+			}
+			.form-set {
+				text-align: center;
+				font-size: medium;
+				color: black;
+
+			}
+		</style>
+		<title>My virtual museum</title>
+	</head>
+	<body>
+		<font color="white">
+		<font size="5">
+			<font face="Georgia">
+		<h1 class="centra-h1">My virtual museum
+		</font>
+		</h1>
+		<img src="lagioconda.jpg" width = "300" height="300">
+		<p class="prova-p">
+			come possiamo vedere,
+			</p>
+			<p class="prova-p">
+			questa è la rappresentazione della Gioconda!!
+		</p>
+		<script>
+			function login() {
+				var username = document.getElementById("username").value;
+				var password = document.getElementById("password").value;
+				if (username == "admin" && password == "admin")
+				{
+					alert("tua madre puttana");
+					window.location.replace("nuovo.html");
+				}
+				 else 
+				{
+					alert("Login (sei un) fallito");
+				}
+			}
+		</script>
+		<form class="form-set">
+			<label for="username">UserName:</label>
+			<input type="text" id="username" name="username" required><br><br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required><br><br>
+			<input type="submit" value="Accedi" onclick="login()">
+		</form>
+
+	</body background>
+</html>
