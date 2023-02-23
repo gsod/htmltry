@@ -1,6 +1,14 @@
 <html>
 	<head>
 		<style>
+			/* .custom-alert {
+				background-color: #f44336;
+				color: white;
+				padding: 20px;
+				opacity: 1;
+				transition: opacity 0.6s;
+				margin-bottom: 15px;
+			} */
 			body {
 				background-image: url("museumsala.jpg");
 				background-size: contain;
@@ -37,22 +45,28 @@
 			<p class="prova-p">
 			questa è la rappresentazione della Gioconda!!
 		</p>
+		<!-- <button onclick="customAlert()">Click me</button> -->
 		<script>
+		
 			function login() {
+				
 				var username = document.getElementById("username").value;
 				var password = document.getElementById("password").value;
 				if (username == "admin" && password == "admin")
 				{
-					alert("tua madre puttana");
-					window.location.replace("nuovo.html");
+					alert("Login succesfully");
+					document.getElementById("login").addEventListener("submit", function(login) {
+						login.preventDefault();
+						window.location.href = "file2.html";
+					});
 				}
 				 else 
 				{
-					alert("Login (sei un) fallito");
+					alert("Login failed, try again");
 				}
 			}
 		</script>
-		<form class="form-set">
+		<form id="login" class="form-set">
 			<label for="username">UserName:</label>
 			<input type="text" id="username" name="username" required><br><br>
 			<label for="password">Password:</label>
